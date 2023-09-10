@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Login from './components/Login'
 import Header from './components/Header';
+import Sessions from './components/Sessions';
+import CreateRestaurant from './components/CreateRestaurant';
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
             onBtnSessionClick={() => setShowAddSession(!showAddSession)}
             onBtnRestaurantClick={() => setShowCreateRestaurant(!showCreateRestaurant)}
           />
+          {showCreateRestaurant && <CreateRestaurant />}
+          <Sessions user={user} showAddSession={showAddSession} />
         </>
       )}
     </div>
