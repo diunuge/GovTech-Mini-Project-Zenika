@@ -37,7 +37,7 @@ public class UserController {
     try {
       User userCreated = userService.addUser(user);
       return new ResponseEntity<>(userCreated, HttpStatus.CREATED);
-    } catch (SessionNotFoundException e) {
+    } catch (RuntimeException e) {
       return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
   }
