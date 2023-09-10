@@ -18,3 +18,6 @@ This will be a consist of two parts
 1. To run tests from the IDE or using maven
 2. You can find the Postman collection to test the API in ./docs folder
 3. Import the collection and run
+4. You can find the H2 console here to check the database http://localhost:8080/h2-console
+5. You can access Swagger API documentation here http://localhost:8080/swagger-ui/
+6. You can access Swagger JSON from here http://localhost:8080/v2/api-docs
