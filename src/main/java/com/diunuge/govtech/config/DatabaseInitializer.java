@@ -16,7 +16,8 @@ public class DatabaseInitializer implements CommandLineRunner {
   @Autowired
   public DatabaseInitializer(
       UserRepository userRepository,
-      RestaurantRepository restaurantRepository) {
+      RestaurantRepository restaurantRepository
+  ) {
     this.userRepository = userRepository;
     this.restaurantRepository = restaurantRepository;
   }

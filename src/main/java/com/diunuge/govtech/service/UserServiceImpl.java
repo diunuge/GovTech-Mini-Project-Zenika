@@ -33,5 +33,11 @@ public class UserServiceImpl implements UserService{
   public User addUser(User user) {
     return this.userRepository.save(user);
   }
+
+  @Override
+  public User getUserById(Long id) {
+    Optional<User> userOptional = userRepository.findById(id);
+    return userOptional.orElseThrow(() -> new UserNotFoundException(id));
+  }
 }
 
