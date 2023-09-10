@@ -86,7 +86,7 @@ public class UserServiceTest {
         () ->  userService.getUserByUsername(username)
     );
 
-    assertEquals("User not found with username: " + username, exception.getMessage());
+    assertEquals("User not found with (username): " + username, exception.getMessage());
   }
 
   @BeforeEach

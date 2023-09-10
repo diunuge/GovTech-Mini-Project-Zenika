@@ -16,5 +16,5 @@ This will be a consist of two parts
 
 ## Test
 1. To run tests from the IDE or using maven
-2. You can find the postman collection to test the API in ./docs folder
+2. You can find the Postman collection to test the API in ./docs folder
 3. Import the collection and run
