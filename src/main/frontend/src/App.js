@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import Login from './components/Login'
+import Header from './components/Header';
 
 function App() {
 
   const [user, setUser] = useState(null)
+  const [showAddSession, setShowAddSession] = useState(false)
+  const [showCreateRestaurant, setShowCreateRestaurant] = useState(false)
 
-  const handleLogin = (username) => {
-    setUser(username);
+  const handleLogin = (user) => {
+    setUser(user);
   };
 
   return (
@@ -15,7 +18,11 @@ function App() {
         <Login onLogin={handleLogin} />
       ) : (
         <>
-          <h1>Welcome, {user}!</h1>
+          <Header
+            user = {user}
+            onBtnSessionClick={() => setShowAddSession(!showAddSession)}
+            onBtnRestaurantClick={() => setShowCreateRestaurant(!showCreateRestaurant)}
+          />
         </>
       )}
     </div>
