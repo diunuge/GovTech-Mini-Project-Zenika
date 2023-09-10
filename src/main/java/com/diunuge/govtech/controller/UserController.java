@@ -1,6 +1,6 @@
 package com.diunuge.govtech.controller;
 
-import com.diunuge.govtech.exception.SessionNotFoundException;
+import com.diunuge.govtech.exception.UserNotFoundException;
 import com.diunuge.govtech.model.User;
 import com.diunuge.govtech.service.UserService;
 import java.util.List;
@@ -47,7 +47,7 @@ public class UserController {
     try {
       User user = userService.getUserByUsername(username);
       return new ResponseEntity<>(user, HttpStatus.OK);
-    } catch (SessionNotFoundException e) {
+    } catch (UserNotFoundException e) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
   }

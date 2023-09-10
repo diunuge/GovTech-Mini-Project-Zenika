@@ -26,7 +26,7 @@ function Login({ onLogin }) {
     await fetchUserProfiles(username);
 
     if (user) {
-      onLogin(username);
+      onLogin(user);
       setUsername('');
     }
   };
