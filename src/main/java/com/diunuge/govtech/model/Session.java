@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -58,6 +59,9 @@ public class Session {
 
   @ManyToOne
   private Restaurant selectedRestaurant;
+
+  @Version
+  private Long version;
 
   public boolean isClosed() {
     return selectedRestaurant != null;
